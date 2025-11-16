@@ -1,3 +1,3 @@
 output "sample" {
-    value = "Welcome to Terraform Learning"
+    value = "Welcome to Terraform Learningg"
 }
