@@ -32,5 +32,5 @@ variable "map" {
 }
 
 output "opmap" {
-    value = "The value ${var.map["name"]}, ${var.map[number]}, ${var.map[boolean]}"
+    value = "The value ${var.map["name"]}, ${var.map["number"]}, ${var.map["boolean"]}"
 }
