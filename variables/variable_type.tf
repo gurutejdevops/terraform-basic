@@ -19,6 +19,10 @@ output "oplist" {
     value = var.list[0]
 }
 
+output "oplists" {
+    value = "The list values are ${var.list[0]}, ${var.list[1]}, ${var.list[2]}, ${var.list[3]}"
+}
+
 variable "map" {
     default = {
         name = "Guru"
@@ -28,5 +32,5 @@ variable "map" {
 }
 
 output "opmap" {
-    value = var.map["name"]
+    value = "The value ${var.map["name"]}, ${var.map[number]}, ${var.map[boolean]}"
 }
