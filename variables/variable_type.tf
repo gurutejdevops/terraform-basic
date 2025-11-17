@@ -16,7 +16,7 @@ variable "list" {
 }
 
 output "oplist" {
-    value = var.list
+    value = var.list[0]
 }
 
 variable "map" {
@@ -28,5 +28,5 @@ variable "map" {
 }
 
 output "opmap" {
-    value = var.map
+    value = var.map["name"]
 }
