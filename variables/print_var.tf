@@ -22,6 +22,12 @@ output "printfav_cloud" {
     value = var.fav_clous
 }
 
+variable "states" {}
+
+output "print_states" {
+    value = "The total number of states in india ${var.states}"
+}
+
 
 
 
