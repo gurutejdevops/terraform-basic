@@ -10,7 +10,7 @@ variable "list" {
     default = [
         "Hello",
         100,
-        true
+        true,
         "World"
     ]
 }
