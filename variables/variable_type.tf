@@ -15,11 +15,11 @@ variable "list" {
     ]
 }
 
-output "oplist" {
+output "print_list" {
     value = var.list[0]
 }
 
-output "oplists" {
+output "print_list_values" {
     value = "The list values are ${var.list[0]}, ${var.list[1]}, ${var.list[2]}, ${var.list[3]}"
 }
 
