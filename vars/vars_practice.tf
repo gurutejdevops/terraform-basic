@@ -1,23 +1,27 @@
-variable "string_sample" {
-    default = "Hello World"
+variable "default_variable" {
+    default = "Hello Guru, Welcome to Terraform Learning"
 }
 
-output "print_string_sample" {
-    value = "The value of sample variable is ${var.string_sample}"
+output "print_default_variable" {
+    value = var.default_variable
 }
 
-variable "number_sample" {
-    default = 10
+variable "list_variable" {
+    default = ["Guru", "Terraform", 100]
 }
 
-output "print_number_sample" {
-    value = "The value of number variable is ${var.number_sample}"
+output "print_list_variable" {
+    value = "Hello from ${var.list_variable[0]}, and he is learning ${var.list_variable[1]}, and paid ${var.list_variable[2]}"
 }
 
-variable "boolean_sample" {
-    default = true
+variable "map_variable" {
+    default = {
+        name = "Guru"
+        topic = "Terraform"
+        fees = 100
+    }
 }
 
-output "print_boolean_sample" {
-    value = "The value of number variable is ${var.boolean_sample}"
+output "print_map_variable" {
+    value = "Hello from ${var.map_variable["name"]}, and he is learning ${var.map_variable["topic"]}, and paid ${var.map_variable["fees"]}"
 }
