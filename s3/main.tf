@@ -6,7 +6,7 @@ resource "aws_instance" "app" {
     instance_type = "t2.micro"
 
     tags = {
-        Name ="Terraform-Web-Instance"
+        Name ="Terraform-Web-Instance-${count.index+1}"
 
     }
 }
