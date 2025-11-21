@@ -1,5 +1,5 @@
-resource "aws_instance" "app" {
-    ami = "03f1d522d98841360"
+resource "aws_instance" "application" {
+    ami = "ami-03f1d522d98841360"
     instance_type = "t2.micro"
 
     tags = {
