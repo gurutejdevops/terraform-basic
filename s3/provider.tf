@@ -7,3 +7,7 @@ terraform {
        region = "us-east-1"
     }
 }
+
+variable "howmanyinstance" {
+    default = 2
+}
