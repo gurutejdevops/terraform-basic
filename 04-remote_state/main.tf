@@ -6,7 +6,7 @@ data "aws_ami" "ami_id" {
 
 resource "aws_instance" "app" {
     count = length(var.list)
-    ami = aws_ami.ami_id.image_id 
+    ami = data.aws_ami.ami_id.image_id 
     instance_type = t2.micro
 
 
