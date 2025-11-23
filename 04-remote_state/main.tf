@@ -14,6 +14,11 @@ tags = {
 variable "list" {
     default = ["cart", "dynamic"]
 }
-output "print_private_dns" {
-    value = aws_instance.app[*].private_dns
+
+#idx = index number - it can be any i, x, idx
+output "DNS_NAME" {
+    value = {
+        for idx, name in var.list :
+        name => aws_instance.app[idx].private_dns
+    }
 }
