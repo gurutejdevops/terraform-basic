@@ -3,21 +3,17 @@ data "aws_ami" "ami_id" {
     name_regex = "my_image_b55"
     owners =  ["self"] #need to mention "self" otherwise it will check in the total internet
 }
-
 resource "aws_instance" "app" {
     count = length(var.list)
     ami = data.aws_ami.ami_id.image_id 
     instance_type = "t2.micro"
-
 tags = {
     Name = var.list[count.index]
 }
 }
-
 variable "list" {
     default = ["cart", "dynamic"]
 }
-
 output "print_private_dns" {
-    value = aws_instance.app[count.index].private_dns
+    value = aws_instance.app[*].private_dns
 }
