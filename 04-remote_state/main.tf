@@ -17,3 +17,7 @@ tags = {
 variable "list" {
     default = ["cart", "dynamic", "DB"]
 }
+
+output "print_private_dns" {
+    value = aws_instance.app[count.index].private_dns
+}
