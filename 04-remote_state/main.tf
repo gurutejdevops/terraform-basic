@@ -7,7 +7,7 @@ data "aws_ami" "ami_id" {
 resource "aws_instance" "app" {
     count = length(var.list)
     ami = data.aws_ami.ami_id.image_id 
-    instance_type = t2.micro
+    instance_type = t3.small
 
 
 tags = {
