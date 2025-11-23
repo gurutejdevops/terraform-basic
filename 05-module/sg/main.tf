@@ -1,6 +1,6 @@
-resource "aws_security_group" "allow_ssh" {
-    name = "allow_ssh"
-    description = "allow_ssh"
+resource "aws_security_group" "allow_sshh" {
+    name = "allow_sshh"
+    description = "allow_sshh"
 
     ingress {
         description = "SSH from Internet"
@@ -20,6 +20,10 @@ resource "aws_security_group" "allow_ssh" {
     }
 
     tags = {
-        Name = "allow_ssh"
+        Name = "allow_sshh"
     }
+}
+
+output "sgid" {
+    value = aws_security_group.allow_sshh.id
 }
