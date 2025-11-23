@@ -15,7 +15,7 @@ tags = {
 }
 
 variable "list" {
-    default = ["cart", "dynamic", "DB"]
+    default = ["cart", "dynamic"]
 }
 
 output "print_private_dns" {
