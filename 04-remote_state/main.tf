@@ -9,10 +9,8 @@ resource "aws_instance" "app" {
     ami = data.aws_ami.ami_id.image_id 
     instance_type = "t2.micro"
 
-
 tags = {
-    Name = "${var.list[count.index]}"
-
+    Name = var.list[count.index]
 }
 }
 
